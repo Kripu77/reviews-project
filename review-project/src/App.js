@@ -1,11 +1,8 @@
 import React from 'react'
+import Reviews from './Components/Reviews';
 import "./CSS/style.css";
 const App = () => {
-    return (
-        <div>
-            <h1> test</h1>
-        </div>
-    )
+    return <Reviews/>
 }
 
 export default App
