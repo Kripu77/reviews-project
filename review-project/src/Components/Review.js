@@ -24,7 +24,7 @@ return data.length-1;
 const randomF = ()=>{
     let newIndex = Math.floor(Math.random()*data.length);
  if(newIndex==index){
-     newIndex = index +1 //this is to avoid the repetion which occurs on someclick
+     newIndex += 1 //this is to avoid the repetion which occurs on someclick
  
  
     }
