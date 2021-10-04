@@ -31,7 +31,9 @@ const random = ()=>{
 <span className="quote-icon">
 <FaQuoteRight/>
 
+
 </span>
+</div>
 <section>
 <h2 className="name"> {name}</h2>
 <h3 className="Job"> {job}</h3>
@@ -51,7 +53,7 @@ return checkIndex(newIndex);
 <button className="fnl-btn" onClick={()=>setIndex(random())}> Surprise Me</button>
 
  
-</div>
+
 
 </article>
 

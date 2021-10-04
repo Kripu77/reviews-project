@@ -2,7 +2,7 @@ const data = [
 {
     id: 1,
     name: 'Bill Gates',
-    job: 'Microsoft Corporation',
+    job: ' Founder Microsoft Corporation',
     image:
       'https://i.insider.com/547cdef0ecad049462b2c11e',
     text:
@@ -10,7 +10,7 @@ const data = [
   },
   {
     id: 2,
-    name: 'Mark ZukerBerg',
+    name: 'Mark Zuckerberg',
     job: 'CEO Facebook',
     image:
       'https://tse2.mm.bing.net/th?id=OIP.1s3wMYYJZrf9eR2X69QCMgHaEc&pid=Api&P=0&w=273&h=165',
@@ -29,7 +29,7 @@ const data = [
   {
     id: 4,
     name: 'Chris Green',
-    job: 'CEO, Hungry Jacks',
+    job: 'CEO Hungry Jacks',
     image:
       'https://res.cloudinary.com/kripukhadka-com/image/upload/v1633314570/chris_vs6bon.jpg',
     text:
