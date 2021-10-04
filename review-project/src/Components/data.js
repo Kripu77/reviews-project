@@ -4,23 +4,23 @@ const data = [
     name: 'Bill Gates',
     job: 'Microsoft Corporation',
     image:
-      'https://res.cloudinary.com/kripukhadka-com/image/upload/v1633314578/billgates_rzosug.jpg',
+      'https://i.insider.com/547cdef0ecad049462b2c11e',
     text:
       "'If you can't make it good, at least make it look good.'",
   },
   {
     id: 2,
     name: 'Mark ZukerBerg',
-    job: 'Facebook',
+    job: 'CEO Facebook',
     image:
-      'https://res.cloudinary.com/kripukhadka-com/image/upload/v1633314568/mark_effj13.jpg',
+      'https://tse2.mm.bing.net/th?id=OIP.1s3wMYYJZrf9eR2X69QCMgHaEc&pid=Api&P=0&w=273&h=165',
     text:
       'People developed planes first and then took care of flight safety. If people were focused on safety first, no one would ever have built a plane.',
   },
   {
     id: 3,
     name: 'Elon Musk',
-    job: 'Tesla',
+    job: 'CEO Space X/Tesla',
     image:
       'https://res.cloudinary.com/kripukhadka-com/image/upload/v1633314568/elonmusk_xtpw1e.jpg',
     text:
