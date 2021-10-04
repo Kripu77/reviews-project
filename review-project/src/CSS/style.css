@@ -35,6 +35,7 @@ font-size: 3rem;
     margin: 4rem auto 0 auto;
     background-color: white;
     padding: 30px;
+    box-shadow: 1px 1px 20px gray;
 }
 
 img{
@@ -62,7 +63,11 @@ section{
 }
 .Job{
 color: #49a6e9;
+transition: 0.3s all ease-in-out;
 
+}
+.Job:hover{
+    color:#1a6aa2;
 }
 
 svg {

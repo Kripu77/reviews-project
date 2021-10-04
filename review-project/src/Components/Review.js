@@ -1,11 +1,22 @@
 import React, {useState} from 'react';
 import data from "./data.js";
-import {FaChevronLeft, FaChevronRight, FaQuoteRight} from 'react-icons/fa';
+import {FaChevronLeft, FaChevronRight, FaPeopleArrows, FaQuoteRight} from 'react-icons/fa';
 
 const Review = () => {
 
     const[index, setIndex] = useState(1);
-   const {name, job, image, text } = data[index]
+   const {name, job, image, text } = data[index];
+   //function to check the index
+
+   const checkIndex = (index)=>{
+       if(index> data.length-1){
+          return 0;
+       }
+       if(index < 0){
+           return data.length-1;
+       }
+       return index;
+   }
     return <>
     <main className="container"> 
 <article>
@@ -22,8 +33,14 @@ const Review = () => {
 </section>
 
 <div className="btn-container">
-    <button className="prev-btn" onClick={()=>{setIndex(index-1)}}><FaChevronLeft/> </button>
-      <button className="prev-btn" onClick={()=>{setIndex(index+1)}}><FaChevronRight/> </button>
+    <button className="prev-btn" onClick={()=>{setIndex( (index)=>{
+let newIndex = index +1;
+return checkIndex( newIndex);
+    } )}}><FaChevronLeft/> </button>
+      <button className="prev-btn" onClick={()=>{setIndex((index)=>{
+let newIndex = index-1;
+return checkIndex(newIndex);
+      })}}><FaChevronRight/> </button>
 </div>
 <button className="fnl-btn"> Surprise Me</button>
 
