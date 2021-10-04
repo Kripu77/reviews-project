@@ -17,6 +17,12 @@ const Review = () => {
        }
        return index;
    }
+//    for random
+const random = ()=>{
+   let number = Math.floor( Math.random() * data.length);
+   return number;
+
+}
     return <>
     <main className="container"> 
 <article>
@@ -42,7 +48,7 @@ let newIndex = index-1;
 return checkIndex(newIndex);
       })}}><FaChevronRight/> </button>
 </div>
-<button className="fnl-btn"> Surprise Me</button>
+<button className="fnl-btn" onClick={()=>setIndex(random())}> Surprise Me</button>
 
  
 </div>
