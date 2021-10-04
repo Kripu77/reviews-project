@@ -3,63 +3,54 @@ import data from "./data.js";
 import {FaChevronLeft, FaChevronRight, FaPeopleArrows, FaQuoteRight} from 'react-icons/fa';
 
 const Review = () => {
-
-    const[index, setIndex] = useState(0);
-   const {name, job, image, text } = data[index];
-   //function to check the index
-const checkFn =(index)=>{
+    //as we only want one item at a time there's no need to map or loop through the data
+    //using state hook we can simply set the desired index and display as the user clicks the button
+    
+    const [index, setIndex] = useState(0);
+    const{name,job, image, text} = data[index];
+//to check the status of index
+const checkIn = (index)=>{
     if(index>data.length-1){
         return 0;
     }
     if(index<0){
-        return data.length-1;
+return data.length-1;
     }
     return index;
 }
 
-//generate random quotes
+//suprise me function which will trigger random index, we make use of math function
 
-const randomBtn = ()=>{
+const randomF = ()=>{
     let newIndex = Math.floor(Math.random()*data.length);
-    console.log(newIndex+1)
-
-return newIndex}
-
-    return <>
-    <main className="container"> 
-<article>
-<div className='img-container'>
-<img src={image} alt={name}/>
-<span className="quote-icon">
-<FaQuoteRight/>
-
-
-</span>
-</div>
-<section>
-<h2 className="name"> {name}</h2>
-<h3 className="Job"> {job}</h3>
-<p>{text}</p>
-</section>
-
-<div className="btn-container">
-  <button className='prev-btn' onClick={
-      ()=>setIndex(checkFn(index+1))
-  }> <FaChevronLeft/> </button>
-  <button className='prev-btn2'onClick={()=>setIndex(checkFn(index-1))}> <FaChevronRight/></button>
+ if(newIndex==index){
+     newIndex = index +1 //this is to avoid the repetion which occurs on someclick
  
+ 
+    }
+
+    setIndex(newIndex);
+}
+    return <main>
+    <article className="container">
+        <img src={image} alt={name}/>
+        <section className="">
+<h3 className="name">{name}</h3>
+<h4 className="Job"> {job}</h4>
+<p> {text}</p>
+        </section>
+<div className="btn-container">
+<button className="prev-btn" onClick={()=>{ setIndex(()=>checkIn(index-1))
+
+
+}}><FaChevronLeft/></button>
+<button className="prev-btn2" onClick={()=>{setIndex(()=>checkIn(index+1))}}><FaChevronRight/></button>
+
 </div>
-<button className="fnl-btn" onClick={
-  ()=>setIndex(randomBtn)
-}> Surprise Me</button>
-
-</article>
-
-
-
-    </main>
-    </>
+<button className="fnl-btn" onClick= {()=>randomF()}> Surprise Me</button>
+    </article>
     
+    </main>
 }
 
 export default Review
