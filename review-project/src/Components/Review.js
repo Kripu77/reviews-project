@@ -29,7 +29,7 @@ const randomF = ()=>{
  
     }
 
-    setIndex(newIndex);
+    setIndex(checkIn(newIndex));
 }
     return <main>
     <article className="container">
